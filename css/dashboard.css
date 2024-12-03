@@ -1,0 +1,95 @@
+/* General Dashboard Styling */
+.landing-page .dashboard {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px; /* Increased gap between cards */
+  padding: 60px 20px 20px; /* Increased top padding for more space from top */
+  background-color: #fff; /* Light background for contrast */
+  min-height: 100vh; /* Full-page height */
+  color: #333; /* Text color */
+  font-family: Arial, sans-serif; /* Use a clean, modern font */
+  margin-left: 50px;
+}
+
+/* Individual Card Styling */
+.landing-page .card {
+  background: #fff; /* White background for cards */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 20px;
+  width: 280px; /* Fixed width for all cards */
+  height: 350px; /* Fixed height for cards */
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Hover effect for cards */
+.landing-page .card:hover {
+  transform: translateY(-5px); /* Lift effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+}
+
+/* Section Headers */
+.landing-page.card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #282c34; /* Matches App-header text color */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Weather Card Specific Styling */
+.landing-page .weather-card {
+  background: linear-gradient(135deg, #f0f9ff, #c8dff5);
+  color: #003366; /* Dark blue for text */
+}
+
+/* Weather Details Styling */
+.landing-page .weather-details p {
+  font-size: 1.1rem;
+  margin: 5px 0;
+}
+
+/* Charts Container Fix */
+.landing-page .chart-container {
+  position: relative;
+  height: 250px; /* Fixed height for chart container */
+  width: 100%; /* Ensure chart spans entire container width */
+}
+
+/* Ensures the chart has a proper aspect ratio */
+.landing-page .chartjs-render-monitor {
+  height: 100% !important; /* Prevents stretching of chart */
+  width: 100% !important;  /* Prevents stretching of chart */
+}
+
+/* Consistent Text Style */
+.landing-page .dashboard p {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+/* Link Styling for Consistency */
+.landing-page .dashboard a {
+  color: #61dafb; /* Matches App-link */
+  text-decoration: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .card {
+      width: 45%; /* 2 cards per row */
+      height: auto; /* Allow the height to adjust based on content */
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+      width: 100%; /* 1 card per row on small screens */
+      height: auto; /* Adjust height dynamically */
+  }
+
+  .dashboard {
+      padding: 20px; /* Reduce padding for smaller screens */
+  }
+}

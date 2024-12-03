@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/* Basic Reset */
+.weather-app * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+/* Main App Container (Flexbox Layout for Centering) */
+.weather-app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 120px); /* Subtract Navbar and Footer height */
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f4f8f2; /* Light greenish background */
+}
+
+/* App Header */
+.weather-app .App-header {
+  background-color: #2a3d31; /* Dark green background */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+/* Weather Container (for Responsiveness) */
+.weather-app .container {
+  max-width: 900px; /* Reduced width */
+  width: 80%; /* Reduced width */
+  height: 500px; /* Reduced height */
+  background: linear-gradient(354deg, #69a742 0%, #9cd97a 100%); /* Green color gradient */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+  top: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Adjustments for mobile */
+.weather-app .container {
+  width: 90%;
+  height: auto;
+  position: relative;
+  margin: 0 auto;
+}
+
+/* Date Section */
+.weather-app .container_date {
+  color: white;
+  font-size: 20px; /* Reduced font size */
+  font-weight: 400;
+  margin-top: 20px;
+  opacity: 0.8;
+}
+
+/* City Name Section */
+.weather-app .container_city {
+  margin-top: 1rem;
+  font-size: 35px; /* Reduced font size */
+  font-weight: 700;
+  color: white;
+}
+
+/* Degree Section */
+.container_degree {
+  font-size: 50px; /* Reduced font size */
+  font-weight: 800;
+  color: white;
+  position: relative;
+  top: -20px;
+}
+
+/* Image/Icon Section */
+.weather-app .container_img {
+  position: relative;
+  top: -29px;
+}
+
+/* Degree Icon */
+.weather-app .degree_icon {
+  font-size: 20px; /* Reduced icon size */
+  color: white;
+}
+
+/* Paragraph Section for Weather Info */
+.weather-app .count_par {
+  position: relative;
+  top: -15px;
+  color: white;
+  font-size: 18px; /* Reduced font size */
+}
+
+/* Input and Button Section (Flexbox Layout for Alignment) */
+.weather-app .input-button-container {
+  display: flex;
+  justify-content: space-between; /* Space between input and button */
+  align-items: center;
+  margin-top: 2rem; /* Increased margin */
+  width: 75%; /* Adjust width of the container */
+  max-width: 600px; /* Limit width for larger screens */
+}
+
+.weather-app .input {
+  border: none;
+  padding: 1rem;
+  border-radius: 0px 0px 0px 15px;
+  background: #e8f5e9; /* Light green background for input */
+  width: 70%; /* Reduced width for input */
+  transition: 0.3s;
+}
+
+.weather-app .input:focus {
+  outline-color: #e8f5e9;
+  background: #e8f5e9;
+  box-shadow: inset 20px 20px 60px #e8e8e8, inset -20px -20px 60px #ffffff;
+  transition: 0.3s;
+}
+
+.weather-app button {
+  color: white;
+  padding: 1rem 2rem; /* Increased padding */
+  font-size: 18px; /* Reduced font size */
+  cursor: pointer;
+  border: 1px solid #e8e8e8;
+  background-color: #69a742; /* Green button color */
+  border-radius: 8px;
+  transition: all 0.3s;
+  width: 25%; /* Reduced button width */
+  margin-left: 20px; /* Space between button and input */
+}
+
+/* Button Active State */
+.weather-app button:active {
+  color: #f1f1f1;
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+
+/* Form Section */
+.weather-app .form {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+/* Adjust for Desktop and Larger Screens */
+@media (min-width: 768px) {
+  .weather-app .container {
+    width: 70%; /* Reduced width for larger screens */
+    height: 600px; /* Reduced height for larger screens */
+  }
+
+  .weather-app .container_city {
+    font-size: 45px; /* Reduced font size */
+  }
+
+  .weather-app .container_degree {
+    font-size: 70px; /* Reduced font size */
+  }
+
+  .weather-app .container_date {
+    font-size: 26px; /* Reduced font size */
+  }
+
+  .weather-app .input {
+    width: 60%; /* Reduced input width */
+  }
+
+  .weather-app button {
+    width: 35%; /* Adjusted button width */
+  }
+}
+
+@media (min-width: 1024px) {
+  .weather-app .container {
+    width: 60%; /* Further reduced width for very large screens */
+    max-width: 1000px;
+    height: 650px; /* Reduced height */
+  }
+
+  .weather-app .container_city {
+    font-size: 50px; /* Reduced font size */
+  }
+
+  .weather-app .container_degree {
+    font-size: 80px; /* Reduced font size */
+  }
+
+  .weather-app .container_date {
+    font-size: 28px; /* Reduced font size */
+  }
+
+  .weather-app .input {
+    width: 55%; /* Reduced input width */
+  }
+
+  .weather-app button {
+    width: 30%; /* Reduced button width */
+  }
+}
